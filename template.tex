@@ -1,14 +1,69 @@
-\documentclass{article}
-
-
-$if(title)$
-\title{$title$}
-$endif$
+\documentclass[$fontsize$]{absbook}
 
 \begin{document}
 
-\maketitle
+% \fontsize{13pt}{20pt}\selectfont
 
-\section{Hello world}
+$if(title)$
+\begin{center}
+    {\large $title$} \vspace{2cm} \\
 
+    {\Huge \sc Conference Program} \\
+
+    $if(date)$
+    \vspace{5cm}
+    $date$
+    $endif$
+\end{center}
+\newpage
+$endif$
+
+$if(body)$
+\section*{Foreword}
+
+$body$
+
+$if(organizers)$
+\vspace*{\fill}
+\hfill On behalf of the organizing committee,\\
+\begin{flushright}
+    $for(organizers)$
+    $organizers.name$ (\textit{$organizers.affiliation$}) ~\bullet~
+    $endfor$
+\end{flushright}
+\newpage
+$endif$
+$endif$
+
+\section*{Abstracts}
+
+$for(abstracts)$
+    \setcounter{sidenote}{1}
+    {\Large $abstracts.title$} \\
+    $for(abstracts.authors)$
+    $it.name$\sidenote{$it.affiliation$} ~\bullet~
+    $endfor$
+    {\justify
+        $abstracts.abstract$
+    } \\
+    $if(abstracts.id)$
+    \sidenotetext{\textbf{$abstracts.id$}}
+    $endif$
+    $if(abstracts.session)$
+    \sidenotetext{Session: $abstracts.session$}
+    $endif$
+    $if(abstracts.time)$
+    \sidenotetext{$abstracts.time$}
+    $endif$
+    $if(abstracts.email)$
+    \sidenotetext{\href{mailto:$abstracts.email$}{Email}}
+    $endif$
+    $if(abstracts.doi)$
+    \sidenotetext{\href{https://doi.org/$abstracts.doi$}{$abstracts.doi$}}
+    $endif$
+    $if(abstracts.arxiv)$
+    \sidenotetext{\href{$abstracts.arxiv$}{arXiv}}
+    $endif$
+    \vspace{2cm}
+$endfor$
 \end{document}
