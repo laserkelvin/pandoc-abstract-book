@@ -1,0 +1,36 @@
+---
+title: Conference Name
+organizers:
+  - name: Joe Bloggs
+    affiliation: University of Nowhere
+  - name: Mary Bloggs
+    affiliation: Nowheresville College
+  - name: Nobody
+    affiliation: Nowhere
+abstracts:
+  - title: Some cool work people did
+    authors:
+      - name: Joe Bloggs
+        affiliation: University of Nowhere
+      - name: Boss Person
+        affiliation: University of Nowhere
+    abstract: This talk will cover the stuff that we did a while ago. It kinda worked out but also it didn't.
+  - title: Another talk—this time with feeling
+    authors:
+      - name: Nobody
+        affiliation: Somewhere
+    abstract: I really didn't want to give this talk, but the conference is run by my friends.
+    arxiv: https://arxiv.org/abs/12590151.5125
+  - title: Some cool work people did
+    authors:
+      - name: Joe Bloggs
+        affiliation: University of Nowhere
+      - name: Boss Person
+        affiliation: University of Nowhere
+    abstract: This talk will cover the stuff that we did a while ago. It kinda worked out but also it didn't.
+    arxiv: https://arxiv.org/abs/12590151.5125
+---
+
+This is the conference foreword. It's optional, but it sets the tone of the conference.
+
+I would strongly recommend putting something here, even if it's mindless dribble like this.
