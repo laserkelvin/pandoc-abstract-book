@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>$title$ abstract book</title>
+        <link rel="stylesheet" href="base.css" type="text/css"/>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+        <h3 class="conference-title">$title$</h3>
+        <h1>Conference Program</h1>
+        $if(body)$
+        <h3>Foreword</h3>
+        $body$
+        $if(organizers)$
+        <div>
+            <p style="text-align: center;"><i>The organizing committee:</i></p>
+            <ul class="organizers">
+            $for(organizers)$
+                <li>
+                    $organizers.name$ &middot; $organizers.affiliation$
+                </li>
+            $endfor$
+            </ul>
+        </div>
+        $endif$
+        $endif$
+        <h3>Abstracts</h3>
+        $for(abstracts)$
+        <div class="abstract-entry">
+            <h2>$abstracts.title$</h2>
+            <ul>
+                $for(abstracts.authors)$
+                <li>
+                    $it.name$ &middot; $it.affiliation$
+                </li>
+                $endfor$
+            </ul>
+            <p>
+                $abstracts.abstract$
+            </p>
+            <div class="abstract-data">
+                $if(abstracts.id)$
+                <p><b>$abstracts.id$</b></p>
+                $endif$
+                $if(abstracts.session)$
+                <p><i>Session: $abstracts.session$</i></p>
+                $endif$
+                $if(abstracts.time)$
+                <p>$abstracts.time$</p>
+                $endif$
+                $if(abstracts.email)$
+                <p><a href="mailto: $abstracts.email$">Email</a></p>
+                $endif$
+                $if(abstracts.doi)$
+                <p><a href="https://doi.org/$abstracts.doi$">DOI: $abstracts.doi$</a></p>
+                $endif$
+                $if(abstracts.arxiv)$
+                <p>
+                    <a class="arxiv" href="$abstracts.arxiv$">arXiv</a>
+                </p>
+                $endif$
+            </div>
+        </div>
+        <hr/>
+        $endfor$
+    </body>
+    <footer>
+        Copyright $title$ © <script>document.write(new Date().getFullYear())</script>
+    </footer>
+</html>

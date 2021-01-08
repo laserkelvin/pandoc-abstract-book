@@ -1,0 +1,101 @@
+
+@import url('fonts.css');
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    text-rendering: optimizeLegibility;
+    width: 60%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: baseline;
+    /* font-size: 1.2em; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 5.6em;
+    font-variant: small-caps;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.4em;
+    font-weight: 300;
+    font-family: 'Lora', serif;
+}
+
+h3 {
+    font-size: 3.6em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    /* margin-bottom: 0.5em; */
+}
+
+hr {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.conference-title {
+    font-size: 3.6em;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -1em;
+}
+
+.organizers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.organizers > li {
+    display: flex;
+    width: 50%;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.abstract-entry {
+    display: grid;
+    grid-template-columns: 0.52fr 0.4fr;
+    width: 100%;
+    align-items: baseline;
+}
+
+.abstract-entry > h2 {
+    text-align: left;
+}
+
+.abstract-entry > p, .abstract-data > p {
+    text-align: justify;
+    /* text-indent: 1em; */
+}
+
+.abstract-data > p {
+    padding-left: 1.5em;
+}
+
+.abstract-data {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.arxiv {
+    background-color: #b31b1b;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.2em;
+}
